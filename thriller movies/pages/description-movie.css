@@ -1,0 +1,118 @@
+@import "nav.css";
+
+:root {
+    --color-black: #3A170E;
+    --color-text: #8ecae6;
+    --color-hover: #219ebc;
+    --color-primary: #fb8500;
+    --color-secondary: #ffb703;
+    --color-red: #C14C31;
+    --color-light:#fff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-black);
+    margin: 0;
+
+}
+
+
+#movie-details {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 40px ;
+    padding: 20px;
+    background-color: var(--color-black);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#movie-details h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--color-red);
+}
+
+#movie-details p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--color-light);
+}
+
+#movie-details button {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#movie-details button:hover {
+    background-color: #0062cc;
+}
+
+.iframe-trailer {
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: 30px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 525px) {
+    .iframe-trailer {
+        width: auto;
+    }
+}
+
+
+/* Stili per il rating */
+.rating {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: var(--color-red);
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.rating-text {
+    margin-right: 10px;
+}
+
+/* Stili per le stelle */
+.star {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('../assets/star.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+}
+
+.star.gold {
+    background-image: url('../assets/star\ \(1\).png'); 
+}
+

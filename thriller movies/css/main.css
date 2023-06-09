@@ -1,0 +1,135 @@
+.titleFavorites {
+color: var(--color-light);
+margin-top: 30px;
+margin-left: 80px;
+}
+main {
+display: flex;
+overflow-x: scroll;
+scroll-snap-type: x mandatory;
+margin-left: 80px;
+}
+
+.movie {
+display: flex;
+flex-direction: column;
+scroll-snap-align: start;
+margin-top: 30px;
+margin-right: 40px;
+margin-bottom: 16px;
+border-radius: 20px;
+box-shadow: 0.2px 4px 5px rgba(0, 0, 0, 0.2);
+background-color: #353535;
+transition: all .5s;
+}
+
+.movie img {
+width: 300px;
+object-fit: cover;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+filter: grayscale(50%);
+}
+
+
+.movie_info {
+position: relative;
+color: var(--color-light);
+font-weight: 600;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-end;
+padding: 8px 16px;
+letter-spacing: 0.5px;
+height: 100%;
+}
+
+.movie_info h3 {
+margin-top: 0;
+font-size: 20px;
+}
+
+.movie_info span {
+background-color: #d32f2f;
+padding: 4px 8px;
+border-radius: 3px;
+font-weight: 600;
+}
+
+.movie_info span.green {
+color: #29a329;
+background-color: #2e7d32;
+}
+
+.movie_info span.orange {
+color: #ffa500;
+background-color: #e65100;
+}
+
+.movie_info span.red {
+background-color: red;
+color: #ffa500;
+}
+
+.add-to-favorites {
+background-color: #d32f2f;
+border: none;
+color: white;
+padding: 8px 16px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin-top: 10px;
+border-radius: 5px;
+cursor: pointer;
+transition: all .5s;
+}
+.movie:hover {
+transform: scale(1.05);
+box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 767px) {
+    main{
+        margin-left: -20px;
+    }
+    .movies {
+
+        margin-left: 0;
+        overflow-x: auto;
+    }
+
+    .movie {
+        margin-right: 16px;
+        width: 200px;
+        border-radius: 10px;
+    }
+
+    .movie img {
+        width: 200px;
+        height: 300px;
+    }
+
+    .movie .movie_info {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .movie h3 {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .movie span {
+    font-size: 14px;
+    margin-right: 8px;
+    }
+
+    .movie .add-to-favorites,
+    .movie .remove-from-favorites {
+    font-size: 14px;
+    padding: 4px 8px;
+    }
+}

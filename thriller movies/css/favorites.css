@@ -1,0 +1,146 @@
+#favorites {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    margin-left: 80px;
+}
+
+.favorite {
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+    margin-top: 30px;
+    margin-right: 40px;
+    margin-bottom: 16px;
+    border-radius: 20px;
+    box-shadow: 0.2px 4px 5px rgba(0, 0, 0, 0.2);
+    background-color: #353535;
+    transition: all 0.5s;
+    position: relative;
+}
+
+.favorite .image-container {
+    position: relative;
+}
+
+.favorite img {
+    width: 300px;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.favorite .titleFavorite {
+    margin-left: 5px;
+    margin-top: 30px;
+    color: var(--color-light);
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.favorite .add-to-favorites {
+    background-color: #d32f2f;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.favorite .remove-from-favorites {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    }
+    
+    .favorite .remove-from-favorites:hover {
+    background-color: #d32f2f;
+    }
+    
+    .favorite .remove-from-favorites:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px white, 0 0 0 4px #f44336;
+    }
+
+.favorite .star {
+    top: 8px;
+    left: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #FFD700;
+}
+
+
+
+.favorite .star {
+    position: absolute;
+}
+
+@media (max-width: 767px) {
+    #favorites {
+        margin-left: 0;
+        overflow-x: auto;
+    }
+
+    .favorite {
+    margin-right: 16px;
+    width: 200px;
+    border-radius: 10px;
+    }
+
+    .favorite img {
+    width: 200px;
+    height: 300px;
+    }
+
+    .favorite .titleFavorite {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .favorite .movie_info {
+        padding: 8px;
+    }
+
+    .favorite .add-to-favorites,
+    .favorite .remove-from-favorites {
+    font-size: 14px;
+    padding: 4px 8px;
+    }
+
+    .favorite .star {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 767px) {
+    #favorites{
+        margin-left: -20px;
+    }
+
+    .titleFavorite{
+        margin-left:30px;
+    }
+}
